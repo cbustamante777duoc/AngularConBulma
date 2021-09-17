@@ -60,7 +60,7 @@
     </div>
   </article>
 
-  <!--TEXT AREA PARA AGREGAR COMENTARIOS-->
+  <!--FORMULARIO PARA AGREGAR COMENTARIOS-->
   <article class="media">
     <figure class="media-left">
       <p class="image is-64x64">
@@ -69,18 +69,30 @@
     </figure>
     <div class="media-content">
       <div class="control">
-        <input class="input is-normal" type="text" placeholder="Nombre">
+        <input
+          class="input is-normal"
+          type="text" [(ngModel)]="nombre"
+          (ngModelChange)="nombre = $event"
+          placeholder="Nombre">
       </div>
       <br>
       <div class="field">
         <p class="control">
-          <textarea class="textarea" placeholder="Agrega un comentario..."></textarea>
+          <textarea
+            class="textarea"
+            [(ngModel)]="comentarios"
+            (ngModelChange)="comentarios = $event"
+            placeholder="Agrega un comentario..."
+          ></textarea>
         </p>
       </div>
       <nav class="level">
         <div class="level-left">
           <div class="level-item">
-            <a class="button is-info">Enviar</a>
+            <a
+            class="button is-info"
+            (click)="agregarComentarios()"
+            >Enviar</a>
           </div>
         </div>
 
