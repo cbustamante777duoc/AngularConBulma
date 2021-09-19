@@ -53,7 +53,11 @@ export class BodyComponent implements OnInit {
     //se limpia los valores de los inputs
     this.nombre = "";
     this.comentario = "";
+  }
 
+  //metodo que elimina los comentarios
+  eliminarComentarios(indice:any){
+    this.comentarios.splice(indice,1);
 
   }
 }
