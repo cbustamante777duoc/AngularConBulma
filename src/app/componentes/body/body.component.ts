@@ -39,7 +39,21 @@ export class BodyComponent implements OnInit {
   }
 
   agregarComentarios(){
-    console.log(this.nombre);
-    console.log(this.comentario);
+
+
+    //tiene los mismo valores del arreglo el cual se recorre
+    let auxComentario = {
+      nombre: this.nombre,
+      alias: `@${this.nombre}`,
+      comentario: this.comentario
+    }
+
+    //Agregando el comentaios al arreglo
+    this.comentarios.push(auxComentario);
+    //se limpia los valores de los inputs
+    this.nombre = "";
+    this.comentario = "";
+
+
   }
 }
