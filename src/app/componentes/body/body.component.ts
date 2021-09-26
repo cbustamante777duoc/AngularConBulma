@@ -87,8 +87,8 @@ export class BodyComponent implements OnInit {
   obtenerComentarios(){
     this._comentarios.obtener()
     .subscribe(data =>{
-      this.comentario = data;
-      console.log(this.comentario);
+      this.comentarios = data;
+      console.log(this.comentarios);
     })
 
   }
